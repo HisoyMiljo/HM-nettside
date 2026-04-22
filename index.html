@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hisøy Miljø | Ny nettside på vei</title>
+    <meta
+      name="description"
+      content="Hisøy Miljø bygger en ny, moderne nettside. Prosjektet er klargjort for GitHub og publisering med Netlify."
+    />
+    <meta name="theme-color" content="#17362f" />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Sora:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <script defer src="./scripts/main.js"></script>
+  </head>
+  <body>
+    <div class="page-bg" aria-hidden="true">
+      <div class="page-glow glow-one"></div>
+      <div class="page-glow glow-two"></div>
+      <div class="page-grid"></div>
+    </div>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Hisøy Miljø hjem">
+        <img src="./assets/brand-mark.svg" alt="" />
+        <span>Hisøy Miljø</span>
+      </a>
+
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-nav"
+      >
+        Meny
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Hovedmeny">
+        <a href="#om-prosjektet">Om prosjektet</a>
+        <a href="#leveranse">Dette kommer</a>
+        <a href="#fremdrift">Fremdrift</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero section">
+        <div class="hero-copy" data-reveal>
+          <p class="eyebrow">Klargjort for GitHub og Netlify</p>
+          <h1>Hisøy Miljø bygger en ny digital tilstedeværelse.</h1>
+          <p class="lead">
+            Dette prosjektet er satt opp som et solid startpunkt for en moderne
+            bedriftsnettside. Strukturen er klar, designretningen er definert,
+            og publisering kan kobles direkte til GitHub og Netlify.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#fremdrift">Se neste steg</a>
+            <a class="button button-secondary" href="#kontakt">Klargjør innhold</a>
+          </div>
+
+          <ul class="hero-facts" aria-label="Status">
+            <li>
+              <strong>01</strong>
+              <span>Nettsidestruktur opprettet</span>
+            </li>
+            <li>
+              <strong>02</strong>
+              <span>GitHub-flyt definert</span>
+            </li>
+            <li>
+              <strong>03</strong>
+              <span>Netlify-oppsett klart</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="hero-panel" data-reveal>
+          <div class="panel-card">
+            <p class="panel-label">Prosjektstatus</p>
+            <h2>Første publiserbare utgave er klar til videre arbeid.</h2>
+            <p>
+              Siden er laget som en rask, responsiv startside. Den kan publiseres
+              umiddelbart, og deretter bygges ut med reelle tjenester, bilder,
+              referanser og kontaktinformasjon.
+            </p>
+            <div class="panel-list">
+              <div>
+                <span>Klar nå</span>
+                <strong>Design, struktur, deploy-oppsett</strong>
+              </div>
+              <div>
+                <span>Legges inn neste</span>
+                <strong>Faktisk bedriftsinnhold og domene</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="om-prosjektet" class="section">
+        <div class="section-heading" data-reveal>
+          <p class="eyebrow">Om prosjektet</p>
+          <h2>Et oppsett som er enkelt å videreutvikle med Codex.</h2>
+          <p>
+            Prosjektet er bevisst satt opp uten komplisert byggekjede for første
+            fase. Det gjør at vi kan fokusere på innhold, uttrykk og publisering
+            før vi eventuelt utvider med flere sider, skjemaer eller CMS.
+          </p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card" data-reveal>
+            <p class="card-number">A</p>
+            <h3>Rask oppstart</h3>
+            <p>
+              Ingen tung konfigurasjon er nødvendig for å komme i gang. Filene
+              kan versjoneres direkte i GitHub og publiseres rett fra repoet.
+            </p>
+          </article>
+
+          <article class="feature-card" data-reveal>
+            <p class="card-number">B</p>
+            <h3>Netlify-vennlig</h3>
+            <p>
+              <code>netlify.toml</code> er lagt inn, så nettstedet kan deployes som en
+              statisk side uten ekstra byggetrinn.
+            </p>
+          </article>
+
+          <article class="feature-card" data-reveal>
+            <p class="card-number">C</p>
+            <h3>Bygget for vekst</h3>
+            <p>
+              Strukturen kan utvides med egne undersider for tjenester,
+              referanser, kontakt, rekruttering eller miljøprofil når innholdet
+              er klart.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="leveranse" class="section split-section">
+        <div class="section-heading" data-reveal>
+          <p class="eyebrow">Dette kommer</p>
+          <h2>Naturlige neste utvidelser for den ferdige nettsiden.</h2>
+        </div>
+
+        <div class="deliverables">
+          <article class="deliverable-card" data-reveal>
+            <h3>Tjenestesider</h3>
+            <p>
+              Egne seksjoner eller undersider med konkret beskrivelse av hva
+              Hisøy Miljø tilbyr, hvem dere hjelper og hvordan oppdrag gjennomføres.
+            </p>
+          </article>
+
+          <article class="deliverable-card" data-reveal>
+            <h3>Referanser og tillit</h3>
+            <p>
+              Kundesitater, bilder fra arbeid, sertifiseringer og annen
+              dokumentasjon som bygger troverdighet.
+            </p>
+          </article>
+
+          <article class="deliverable-card" data-reveal>
+            <h3>Kontakt og konvertering</h3>
+            <p>
+              Telefon, e-post, geografisk område, kontaktskjema og tydelige
+              knapper som gjør det enkelt å ta kontakt.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="fremdrift" class="section timeline-section">
+        <div class="section-heading" data-reveal>
+          <p class="eyebrow">Fremdrift</p>
+          <h2>Tre trinn fra oppstart til publisert nettside.</h2>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-step" data-reveal>
+            <span>Trinn 1</span>
+            <h3>Samle innhold</h3>
+            <p>
+              Fyll inn malen i <code>docs/innhold-vi-trenger.md</code> med tjenester,
+              kontaktinfo, område, bilder, logo og ønsket tone.
+            </p>
+          </article>
+
+          <article class="timeline-step" data-reveal>
+            <span>Trinn 2</span>
+            <h3>Bygg ferdig siden</h3>
+            <p>
+              Når innholdet er klart, bruker vi Codex til å skrive endelig tekst,
+              sette inn ekte informasjon og bygge ut flere seksjoner eller sider.
+            </p>
+          </article>
+
+          <article class="timeline-step" data-reveal>
+            <span>Trinn 3</span>
+            <h3>Publiser</h3>
+            <p>
+              Push prosjektet til GitHub og koble repoet til Netlify for automatisk
+              deploy ved hver oppdatering.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="kontakt" class="section contact-section">
+        <div class="contact-card" data-reveal>
+          <p class="eyebrow">Klar for neste steg</p>
+          <h2>Send inn bedriftsinnholdet, så bygger vi resten av siden.</h2>
+          <p>
+            Det viktigste akkurat nå er å samle riktig tekst, bilder og
+            kontaktinformasjon. Når det er på plass, kan Codex gjøre nettstedet
+            klart for publisering på kort tid.
+          </p>
+
+          <div class="contact-meta">
+            <div>
+              <span>GitHub-konto</span>
+              <strong>HisoyMiljo</strong>
+            </div>
+            <div>
+              <span>Deploy-mål</span>
+              <strong>Netlify</strong>
+            </div>
+            <div>
+              <span>Status</span>
+              <strong>Klar for innhold og repo</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Hisøy Miljø</p>
+      <p>Prosjektoppsett for ny nettside</p>
+      <p>&copy; <span data-year></span></p>
+    </footer>
+  </body>
+</html>

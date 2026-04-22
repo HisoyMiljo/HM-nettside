@@ -2,6 +2,8 @@
 
 Dette prosjektet er startgrunnlaget for den nye nettsiden til Hisøy Miljø. Oppsettet er laget for å være enkelt å videreutvikle med Codex, lett å legge i GitHub og rett fram å publisere med Netlify.
 
+Repository: `https://github.com/HisoyMiljo/HM-nettside`
+
 ## Hva som er satt opp
 
 - En responsiv startside i [index.html](./index.html)
@@ -30,36 +32,22 @@ Dette prosjektet er startgrunnlaget for den nye nettsiden til Hisøy Miljø. Opp
 
 Det enkleste er å åpne `index.html` direkte i nettleser.
 
-Hvis dere vil kjøre en enkel lokal server, kan dere bruke Python:
+Hvis dere heller vil bruke en lokal statisk server, kan dere kjøre en valgfri enkel HTTP-server fra prosjektmappen.
 
-```powershell
-python -m http.server 8080
+## GitHub-status
+
+Lokalt git-repo er opprettet og koblet til `origin`:
+
+```text
+https://github.com/HisoyMiljo/HM-nettside.git
 ```
-
-Åpne deretter `http://localhost:8080`.
-
-## Slik legger dere prosjektet i GitHub
-
-1. Opprett et nytt tomt repository i GitHub-kontoen `HisoyMiljo`, for eksempel `hisoy-miljo-nettside`.
-2. Kjør disse kommandoene fra prosjektmappen:
-
-```powershell
-git init
-git add .
-git commit -m "Opprett startgrunnlag for Hisøy Miljø nettside"
-git branch -M main
-git remote add origin https://github.com/HisoyMiljo/hisoy-miljo-nettside.git
-git push -u origin main
-```
-
-Hvis repository-navnet blir noe annet, bytt bare ut URL-en i `git remote add origin`.
 
 ## Slik kobler dere GitHub til Netlify
 
 1. Logg inn på Netlify.
 2. Velg `Add new site` og deretter `Import an existing project`.
 3. Koble til GitHub-kontoen som eier repoet.
-4. Velg repository for Hisøy Miljø.
+4. Velg repository `HM-nettside`.
 5. Bruk disse innstillingene:
 
 ```text

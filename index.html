@@ -3,250 +3,371 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hisøy Miljø | Ny nettside på vei</title>
+    <title>Hisøy Miljø AS | Din los i krevende miljøsaker</title>
     <meta
       name="description"
-      content="Hisøy Miljø bygger en ny, moderne nettside. Prosjektet er klargjort for GitHub og publisering med Netlify."
+      content="Hisøy Miljø AS bistår offentlige og private oppdragsgivere med miljøtekniske undersøkelser, marine vurderinger, renseløsninger og naturrestaurering."
     />
-    <meta name="theme-color" content="#17362f" />
+    <meta name="theme-color" content="#0b4f56" />
     <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Sora:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Sora:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles/main.css" />
     <script defer src="./scripts/main.js"></script>
   </head>
-  <body>
-    <div class="page-bg" aria-hidden="true">
-      <div class="page-glow glow-one"></div>
-      <div class="page-glow glow-two"></div>
-      <div class="page-grid"></div>
+  <body data-page="home">
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="site-header__inner">
+          <a class="brand" href="./index.html" aria-label="Hisøy Miljø AS hjem">
+            <img
+              src="./assets/images/logo-hisoy-miljo.png"
+              alt="Hisøy Miljø AS logo"
+            />
+          </a>
+
+          <button
+            class="nav-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="site-nav"
+          >
+            Meny
+          </button>
+
+          <nav id="site-nav" class="site-nav" aria-label="Hovedmeny">
+            <a data-page-link="home" href="./index.html">Forside</a>
+            <a data-page-link="services" href="./tjenester.html">Tjenester</a>
+            <a data-page-link="about" href="./om-oss.html">Om oss</a>
+            <a data-page-link="projects" href="./referanseprosjekter.html"
+              >Referanseprosjekter</a
+            >
+            <a data-page-link="contact" href="./kontakt.html">Kontakt</a>
+            <a data-page-link="news" href="./nyheter.html">Nyheter</a>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero hero--home section">
+          <div class="hero__content" data-reveal>
+            <p class="eyebrow">Hisøy Miljø AS - din los</p>
+            <h1>Senior miljøfaglig rådgivning i sjø, jord og vann.</h1>
+            <p class="lead">
+              Hisøy Miljø AS bistår offentlige og private oppdragsgivere med
+              miljøtekniske undersøkelser, marine vurderinger, renseløsninger,
+              naturrestaurering og beslutningsstøtte i krevende miljøsaker.
+            </p>
+            <div class="hero__actions">
+              <a class="button" href="./tjenester.html">Se tjenester</a>
+              <a class="button button--ghost" href="./kontakt.html"
+                >Ta kontakt</a
+              >
+            </div>
+
+            <div class="stat-grid">
+              <article class="stat-card">
+                <strong>35+</strong>
+                <span>år erfaring fra ledende miljøfaglige roller</span>
+              </article>
+              <article class="stat-card">
+                <strong>200+</strong>
+                <span>prosjekter i ekspertmiljøets samlede portefølje</span>
+              </article>
+              <article class="stat-card">
+                <strong>Norge</strong>
+                <span>med oppdrag i Norden og Europa</span>
+              </article>
+            </div>
+          </div>
+
+          <div class="hero__visual" data-reveal>
+            <figure class="hero-figure">
+              <img
+                src="./assets/images/oslo-havn.jpg"
+                alt="Arbeid i havneområde med fokus på marine miljøforhold"
+              />
+            </figure>
+            <aside class="hero-note">
+              <p class="hero-note__title">Faglig retning</p>
+              <p>
+                Da sjøfarerne så lyset fra Torungene fikk de bekreftet kursen.
+                Hisøy Miljø skal fylle den samme rollen i moderne miljøsaker:
+                tydelig, trygg og fremoverlent.
+              </p>
+            </aside>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-header" data-reveal>
+            <p class="eyebrow">Hvorfor Hisøy Miljø</p>
+            <h2>Et smidig ekspertmiljø med kort vei fra spørsmål til beslutning.</h2>
+          </div>
+
+          <div class="card-grid card-grid--three">
+            <article class="info-card" data-reveal>
+              <h3>Personlig oppfølging</h3>
+              <p>
+                Du møter senior kompetanse tidlig og beholder samme faglige
+                kontakt gjennom hele oppdraget.
+              </p>
+            </article>
+            <article class="info-card" data-reveal>
+              <h3>Riktig ekspertise fra start</h3>
+              <p>
+                Vi kobler inn spesialister innen kjemi, biologi, marine miljø,
+                hydrogeologi, natur og tiltaksvurdering når saken krever det.
+              </p>
+            </article>
+            <article class="info-card" data-reveal>
+              <h3>Fleksible oppdragsformer</h3>
+              <p>
+                Fastpris, løpende rådgivning, suksessbaserte modeller eller
+                langsiktige samarbeidsavtaler vurderes ut fra behov og risiko.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section section--tinted">
+          <div class="section-header" data-reveal>
+            <p class="eyebrow">Tjenester</p>
+            <h2>Miljøfaglige leveranser som dekker hele beslutningskjeden.</h2>
+          </div>
+
+          <div class="service-grid">
+            <article class="service-card" data-reveal>
+              <h3>Miljøtekniske undersøkelser</h3>
+              <p>
+                Undersøkelser av jord, grunnvann, porevann og masser med tydelig
+                kobling til tiltaksbehov, myndighetskrav og videre utvikling.
+              </p>
+            </article>
+            <article class="service-card" data-reveal>
+              <h3>Marine undersøkelser</h3>
+              <p>
+                Sedimentprøver, resipientvurderinger, småbåthavner, mudring,
+                deponi og rådgivning i kyst- og havnerelaterte saker.
+              </p>
+            </article>
+            <article class="service-card" data-reveal>
+              <h3>Renseløsninger og in situ-tiltak</h3>
+              <p>
+                Vannrensing, biologisk og enzymatisk nedbrytning, pilotering og
+                vurdering av praktiske gjennomføringsmodeller.
+              </p>
+            </article>
+            <article class="service-card" data-reveal>
+              <h3>Naturrestaurering og overvann</h3>
+              <p>
+                Blågrønne løsninger, dammer, våtmarker, jordvern og naturbaserte
+                tiltak som kombinerer funksjon og robusthet.
+              </p>
+            </article>
+            <article class="service-card" data-reveal>
+              <h3>eDNA og miljøovervåking</h3>
+              <p>
+                Målrettet overvåking av arter og påvirkning, passive prøvetakere,
+                mikroplast og dokumentasjon av miljøtilstand over tid.
+              </p>
+            </article>
+            <article class="service-card" data-reveal>
+              <h3>EDD, plansaker og miljørådgivning</h3>
+              <p>
+                Environment Due Diligence, miljøstøtte i eiendom og industri,
+                plansaker, tvister og krevende beslutningsunderlag.
+              </p>
+            </article>
+          </div>
+
+          <div class="section-cta" data-reveal>
+            <a class="button button--secondary" href="./tjenester.html"
+              >Les mer om tjenestene</a
+            >
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="split-panel">
+            <div class="split-panel__copy" data-reveal>
+              <p class="eyebrow">Arbeidsmåte</p>
+              <h2>Vi jobber strukturert, men uten unødvendig friksjon.</h2>
+              <div class="process-list">
+                <article class="process-step">
+                  <span>01</span>
+                  <div>
+                    <h3>Avklare risiko og beslutningsbehov</h3>
+                    <p>
+                      Vi definerer hva oppdragsgiver faktisk må vite for å komme
+                      videre trygt og effektivt.
+                    </p>
+                  </div>
+                </article>
+                <article class="process-step">
+                  <span>02</span>
+                  <div>
+                    <h3>Designe undersøkelse og prøvetaking</h3>
+                    <p>
+                      Omfang, metode og spesialistbruk tilpasses sakens kompleksitet
+                      og myndighetskrav.
+                    </p>
+                  </div>
+                </article>
+                <article class="process-step">
+                  <span>03</span>
+                  <div>
+                    <h3>Vurdere tiltak og handlingsrom</h3>
+                    <p>
+                      Resultater omsettes til klare anbefalinger, kost/nytte og
+                      gjennomførbare tiltak.
+                    </p>
+                  </div>
+                </article>
+                <article class="process-step">
+                  <span>04</span>
+                  <div>
+                    <h3>Følge opp gjennomføring og dialog</h3>
+                    <p>
+                      Vi bistår videre i møte med entreprenører, myndigheter,
+                      prosjektering og dokumentasjon.
+                    </p>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <figure class="split-panel__media" data-reveal>
+              <img
+                src="./assets/images/stein-broch-olsen.jpg"
+                alt="Stein Broch Olsen fra Hisøy Miljø AS"
+              />
+            </figure>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-header" data-reveal>
+            <p class="eyebrow">Referanseprosjekter</p>
+            <h2>Prosjektområder vi kjenner godt fra praksis.</h2>
+          </div>
+
+          <div class="project-grid">
+            <article class="project-card" data-reveal>
+              <img
+                src="./assets/images/middelalderparken.jpg"
+                alt="Bynært vannmiljø og landskapsrestaurering"
+              />
+              <div class="project-card__content">
+                <h3>Bynære vannmiljøer og restaurering</h3>
+                <p>
+                  Vurdering av vannkvalitet, blågrønne løsninger, naturbasert
+                  overvannshåndtering og sammenheng mellom teknikk og landskap.
+                </p>
+              </div>
+            </article>
+            <article class="project-card" data-reveal>
+              <img
+                src="./assets/images/forurensning-sanering.jpg"
+                alt="Forurenset lokalitet med behov for undersøkelser og tiltak"
+              />
+              <div class="project-card__content">
+                <h3>Forurensede lokaliteter og tiltak</h3>
+                <p>
+                  Undersøkelse, risikovurdering og valg av praktiske tiltak ved
+                  komplekse forurensningssituasjoner.
+                </p>
+              </div>
+            </article>
+            <article class="project-card" data-reveal>
+              <img
+                src="./assets/images/vassbed-innlop.jpg"
+                alt="Naturbasert vannbehandling og vassdragstiltak"
+              />
+              <div class="project-card__content">
+                <h3>Vannbehandling og naturbaserte anlegg</h3>
+                <p>
+                  Dammer, infiltrasjon, vannveier og robuste løsninger som
+                  kombinerer rensing, flomdemping og naturhensyn.
+                </p>
+              </div>
+            </article>
+            <article class="project-card" data-reveal>
+              <img
+                src="./assets/images/dam-fornebu.jpg"
+                alt="Prøvetaking og feltarbeid i vannmiljø"
+              />
+              <div class="project-card__content">
+                <h3>Feltarbeid, overvåking og dokumentasjon</h3>
+                <p>
+                  Fra prøveuttak og miljøovervåking til vurdering av effekt og
+                  videre anbefalinger for oppdragsgiver.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <div class="section-cta" data-reveal>
+            <a class="button button--ghost" href="./referanseprosjekter.html"
+              >Se referanseprosjekter</a
+            >
+          </div>
+        </section>
+
+        <section class="section section--compact">
+          <div class="quote-panel" data-reveal>
+            <p class="eyebrow">Noen av virksomhetene vi har bistått</p>
+            <div class="client-cloud">
+              <span>Inspect AS</span>
+              <span>Frost Arkitekter AS</span>
+              <span>Nordr AS</span>
+              <span>Thon Eiendom</span>
+              <span>Statsforvalteren i Agder</span>
+              <span>Norges Naturvernforbund</span>
+              <span>Frogn Marina AS</span>
+              <span>Comrod AS</span>
+              <span>DS Follo AS</span>
+              <span>Tømrerenes Feriehjem AS</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section--cta-band">
+          <div class="cta-band" data-reveal>
+            <div>
+              <p class="eyebrow">Klar for neste steg</p>
+              <h2>Trenger du en trygg miljøfaglig sparringspartner?</h2>
+              <p>
+                Vi tar gjerne en første samtale om situasjonen, beslutningene som
+                må tas og hvordan riktig undersøkelsesopplegg kan settes opp.
+              </p>
+            </div>
+            <a class="button" href="./kontakt.html">Kontakt Hisøy Miljø</a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="site-footer__inner">
+          <div class="site-footer__brand">
+            <img
+              src="./assets/images/logo-hisoy-miljo.png"
+              alt="Hisøy Miljø AS logo"
+            />
+            <p>Hisøy Miljø AS - din los</p>
+          </div>
+
+          <div class="site-footer__meta">
+            <a href="tel:+4792210245">+47 922 10 245</a>
+            <a href="mailto:sbo@hmiljo.no">sbo@hmiljo.no</a>
+            <span>Dovresvingen 9A, 1184 Oslo</span>
+          </div>
+        </div>
+      </footer>
     </div>
-
-    <header class="site-header">
-      <a class="brand" href="#top" aria-label="Hisøy Miljø hjem">
-        <img src="./assets/brand-mark.svg" alt="" />
-        <span>Hisøy Miljø</span>
-      </a>
-
-      <button
-        class="nav-toggle"
-        type="button"
-        aria-expanded="false"
-        aria-controls="site-nav"
-      >
-        Meny
-      </button>
-
-      <nav id="site-nav" class="site-nav" aria-label="Hovedmeny">
-        <a href="#om-prosjektet">Om prosjektet</a>
-        <a href="#leveranse">Dette kommer</a>
-        <a href="#fremdrift">Fremdrift</a>
-        <a href="#kontakt">Kontakt</a>
-      </nav>
-    </header>
-
-    <main id="top">
-      <section class="hero section">
-        <div class="hero-copy" data-reveal>
-          <p class="eyebrow">Klargjort for GitHub og Netlify</p>
-          <h1>Hisøy Miljø bygger en ny digital tilstedeværelse.</h1>
-          <p class="lead">
-            Dette prosjektet er satt opp som et solid startpunkt for en moderne
-            bedriftsnettside. Strukturen er klar, designretningen er definert,
-            og publisering kan kobles direkte til GitHub og Netlify.
-          </p>
-
-          <div class="hero-actions">
-            <a class="button button-primary" href="#fremdrift">Se neste steg</a>
-            <a class="button button-secondary" href="#kontakt">Klargjør innhold</a>
-          </div>
-
-          <ul class="hero-facts" aria-label="Status">
-            <li>
-              <strong>01</strong>
-              <span>Nettsidestruktur opprettet</span>
-            </li>
-            <li>
-              <strong>02</strong>
-              <span>GitHub-flyt definert</span>
-            </li>
-            <li>
-              <strong>03</strong>
-              <span>Netlify-oppsett klart</span>
-            </li>
-          </ul>
-        </div>
-
-        <div class="hero-panel" data-reveal>
-          <div class="panel-card">
-            <p class="panel-label">Prosjektstatus</p>
-            <h2>Første publiserbare utgave er klar til videre arbeid.</h2>
-            <p>
-              Siden er laget som en rask, responsiv startside. Den kan publiseres
-              umiddelbart, og deretter bygges ut med reelle tjenester, bilder,
-              referanser og kontaktinformasjon.
-            </p>
-            <div class="panel-list">
-              <div>
-                <span>Klar nå</span>
-                <strong>Design, struktur, deploy-oppsett</strong>
-              </div>
-              <div>
-                <span>Legges inn neste</span>
-                <strong>Faktisk bedriftsinnhold og domene</strong>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="om-prosjektet" class="section">
-        <div class="section-heading" data-reveal>
-          <p class="eyebrow">Om prosjektet</p>
-          <h2>Et oppsett som er enkelt å videreutvikle med Codex.</h2>
-          <p>
-            Prosjektet er bevisst satt opp uten komplisert byggekjede for første
-            fase. Det gjør at vi kan fokusere på innhold, uttrykk og publisering
-            før vi eventuelt utvider med flere sider, skjemaer eller CMS.
-          </p>
-        </div>
-
-        <div class="feature-grid">
-          <article class="feature-card" data-reveal>
-            <p class="card-number">A</p>
-            <h3>Rask oppstart</h3>
-            <p>
-              Ingen tung konfigurasjon er nødvendig for å komme i gang. Filene
-              kan versjoneres direkte i GitHub og publiseres rett fra repoet.
-            </p>
-          </article>
-
-          <article class="feature-card" data-reveal>
-            <p class="card-number">B</p>
-            <h3>Netlify-vennlig</h3>
-            <p>
-              <code>netlify.toml</code> er lagt inn, så nettstedet kan deployes som en
-              statisk side uten ekstra byggetrinn.
-            </p>
-          </article>
-
-          <article class="feature-card" data-reveal>
-            <p class="card-number">C</p>
-            <h3>Bygget for vekst</h3>
-            <p>
-              Strukturen kan utvides med egne undersider for tjenester,
-              referanser, kontakt, rekruttering eller miljøprofil når innholdet
-              er klart.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section id="leveranse" class="section split-section">
-        <div class="section-heading" data-reveal>
-          <p class="eyebrow">Dette kommer</p>
-          <h2>Naturlige neste utvidelser for den ferdige nettsiden.</h2>
-        </div>
-
-        <div class="deliverables">
-          <article class="deliverable-card" data-reveal>
-            <h3>Tjenestesider</h3>
-            <p>
-              Egne seksjoner eller undersider med konkret beskrivelse av hva
-              Hisøy Miljø tilbyr, hvem dere hjelper og hvordan oppdrag gjennomføres.
-            </p>
-          </article>
-
-          <article class="deliverable-card" data-reveal>
-            <h3>Referanser og tillit</h3>
-            <p>
-              Kundesitater, bilder fra arbeid, sertifiseringer og annen
-              dokumentasjon som bygger troverdighet.
-            </p>
-          </article>
-
-          <article class="deliverable-card" data-reveal>
-            <h3>Kontakt og konvertering</h3>
-            <p>
-              Telefon, e-post, geografisk område, kontaktskjema og tydelige
-              knapper som gjør det enkelt å ta kontakt.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section id="fremdrift" class="section timeline-section">
-        <div class="section-heading" data-reveal>
-          <p class="eyebrow">Fremdrift</p>
-          <h2>Tre trinn fra oppstart til publisert nettside.</h2>
-        </div>
-
-        <div class="timeline">
-          <article class="timeline-step" data-reveal>
-            <span>Trinn 1</span>
-            <h3>Samle innhold</h3>
-            <p>
-              Fyll inn malen i <code>docs/innhold-vi-trenger.md</code> med tjenester,
-              kontaktinfo, område, bilder, logo og ønsket tone.
-            </p>
-          </article>
-
-          <article class="timeline-step" data-reveal>
-            <span>Trinn 2</span>
-            <h3>Bygg ferdig siden</h3>
-            <p>
-              Når innholdet er klart, bruker vi Codex til å skrive endelig tekst,
-              sette inn ekte informasjon og bygge ut flere seksjoner eller sider.
-            </p>
-          </article>
-
-          <article class="timeline-step" data-reveal>
-            <span>Trinn 3</span>
-            <h3>Publiser</h3>
-            <p>
-              Push prosjektet til GitHub og koble repoet til Netlify for automatisk
-              deploy ved hver oppdatering.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section id="kontakt" class="section contact-section">
-        <div class="contact-card" data-reveal>
-          <p class="eyebrow">Klar for neste steg</p>
-          <h2>Send inn bedriftsinnholdet, så bygger vi resten av siden.</h2>
-          <p>
-            Det viktigste akkurat nå er å samle riktig tekst, bilder og
-            kontaktinformasjon. Når det er på plass, kan Codex gjøre nettstedet
-            klart for publisering på kort tid.
-          </p>
-
-          <div class="contact-meta">
-            <div>
-              <span>GitHub-konto</span>
-              <strong>HisoyMiljo</strong>
-            </div>
-            <div>
-              <span>Deploy-mål</span>
-              <strong>Netlify</strong>
-            </div>
-            <div>
-              <span>Status</span>
-              <strong>Klar for innhold og repo</strong>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <p>Hisøy Miljø</p>
-      <p>Prosjektoppsett for ny nettside</p>
-      <p>&copy; <span data-year></span></p>
-    </footer>
   </body>
 </html>

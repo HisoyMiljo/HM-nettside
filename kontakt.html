@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontakt | Hisøy Miljø AS</title>
+    <meta
+      name="description"
+      content="Kontakt Hisøy Miljø AS for miljøtekniske undersøkelser, marine saker, renseløsninger, naturrestaurering og miljørådgivning."
+    />
+    <meta name="theme-color" content="#0b4f56" />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Sora:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <script defer src="./scripts/main.js"></script>
+  </head>
+  <body data-page="contact">
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="site-header__inner">
+          <a class="brand" href="./index.html" aria-label="Hisøy Miljø AS hjem">
+            <img
+              src="./assets/images/logo-hisoy-miljo.png"
+              alt="Hisøy Miljø AS logo"
+            />
+          </a>
+
+          <button
+            class="nav-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="site-nav"
+          >
+            Meny
+          </button>
+
+          <nav id="site-nav" class="site-nav" aria-label="Hovedmeny">
+            <a data-page-link="home" href="./index.html">Forside</a>
+            <a data-page-link="services" href="./tjenester.html">Tjenester</a>
+            <a data-page-link="about" href="./om-oss.html">Om oss</a>
+            <a data-page-link="projects" href="./referanseprosjekter.html"
+              >Referanseprosjekter</a
+            >
+            <a data-page-link="contact" href="./kontakt.html">Kontakt</a>
+            <a data-page-link="news" href="./nyheter.html">Nyheter</a>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <section class="page-hero section">
+          <div class="page-hero__content" data-reveal>
+            <p class="eyebrow">Kontakt</p>
+            <h1>Ta kontakt tidlig når miljøspørsmålet kan påvirke vei videre.</h1>
+            <p class="lead">
+              Vi tar gjerne en første samtale om problemstilling, risiko,
+              myndighetskrav og hvilke undersøkelser eller tiltak som bør komme først.
+            </p>
+          </div>
+          <figure class="page-hero__media" data-reveal>
+            <img
+              src="./assets/images/tvende-fyr.webp"
+              alt="Fyr som symbol på retning og losfunksjon"
+            />
+          </figure>
+        </section>
+
+        <section class="section">
+          <div class="contact-layout">
+            <div class="contact-panel" data-reveal>
+              <h2>Direkte kontakt</h2>
+              <div class="contact-list">
+                <a href="tel:+4792210245">+47 922 10 245</a>
+                <a href="mailto:sbo@hmiljo.no">sbo@hmiljo.no</a>
+                <span>Dovresvingen 9A, 1184 Oslo</span>
+                <span>Org.nr. 934 269 985</span>
+                <span>Alle dager 09.00-19.00</span>
+              </div>
+
+              <div class="contact-box">
+                <h3>Når det haster</h3>
+                <p>
+                  Ring oss når du trenger rask avklaring i en sak som berører
+                  forurensning, sedimenter, vannhåndtering eller plansak.
+                </p>
+              </div>
+
+              <div class="contact-box">
+                <h3>Typiske henvendelser</h3>
+                <ul>
+                  <li>mistanke om forurenset grunn eller sediment</li>
+                  <li>småbåthavn, spylevann eller marint tiltak</li>
+                  <li>naturbasert overvannsløsning eller dam</li>
+                  <li>Environment Due Diligence og eiendomsvurdering</li>
+                </ul>
+              </div>
+            </div>
+
+            <form
+              class="contact-form"
+              name="kontakt"
+              method="POST"
+              data-netlify="true"
+              netlify-honeypot="website"
+              action="/takk.html"
+              data-reveal
+            >
+              <input type="hidden" name="form-name" value="kontakt" />
+              <p class="sr-only">
+                <label>
+                  Ikke fyll ut dette feltet:
+                  <input name="website" />
+                </label>
+              </p>
+
+              <h2>Send en forespørsel</h2>
+
+              <label>
+                Navn
+                <input type="text" name="name" required />
+              </label>
+
+              <label>
+                Virksomhet
+                <input type="text" name="company" />
+              </label>
+
+              <label>
+                E-post
+                <input type="email" name="email" required />
+              </label>
+
+              <label>
+                Telefon
+                <input type="tel" name="phone" />
+              </label>
+
+              <label>
+                Hva gjelder det?
+                <textarea
+                  name="message"
+                  rows="7"
+                  placeholder="Beskriv kort problemstillingen, lokasjonen og hva dere trenger hjelp til."
+                  required
+                ></textarea>
+              </label>
+
+              <button class="button" type="submit">Send melding</button>
+            </form>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="site-footer__inner">
+          <div class="site-footer__brand">
+            <img
+              src="./assets/images/logo-hisoy-miljo.png"
+              alt="Hisøy Miljø AS logo"
+            />
+            <p>Hisøy Miljø AS - din los</p>
+          </div>
+          <div class="site-footer__meta">
+            <a href="tel:+4792210245">+47 922 10 245</a>
+            <a href="mailto:sbo@hmiljo.no">sbo@hmiljo.no</a>
+            <span>Dovresvingen 9A, 1184 Oslo</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

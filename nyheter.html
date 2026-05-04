@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nyheter | Hisøy Miljø AS</title>
+    <meta
+      name="description"
+      content="Nyheter og faglige temaer fra Hisøy Miljø AS om marine miljøforhold, overvann, eDNA, renseløsninger og miljøtekniske undersøkelser."
+    />
+    <meta name="theme-color" content="#0b4f56" />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Sora:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <script defer src="./scripts/main.js"></script>
+  </head>
+  <body data-page="news">
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="site-header__inner">
+          <a class="brand" href="./index.html" aria-label="Hisøy Miljø AS hjem">
+            <img
+              src="./assets/images/logo-hisoy-miljo.png"
+              alt="Hisøy Miljø AS logo"
+            />
+          </a>
+
+          <button
+            class="nav-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="site-nav"
+          >
+            Meny
+          </button>
+
+          <nav id="site-nav" class="site-nav" aria-label="Hovedmeny">
+            <a data-page-link="home" href="./index.html">Forside</a>
+            <a data-page-link="services" href="./tjenester.html">Tjenester</a>
+            <a data-page-link="about" href="./om-oss.html">Om oss</a>
+            <a data-page-link="projects" href="./referanseprosjekter.html"
+              >Referanseprosjekter</a
+            >
+            <a data-page-link="contact" href="./kontakt.html">Kontakt</a>
+            <a data-page-link="news" href="./nyheter.html">Nyheter</a>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <section class="page-hero section">
+          <div class="page-hero__content" data-reveal>
+            <p class="eyebrow">Nyheter</p>
+            <h1>Faglige temaer og innsikt fra arbeidsfeltet vårt.</h1>
+            <p class="lead">
+              Nyhetssiden bygges opp fortløpende. Inntil videre deler vi temaene
+              vi arbeider mest med og gjerne diskuterer med oppdragsgivere.
+            </p>
+          </div>
+          <figure class="page-hero__media" data-reveal>
+            <img
+              src="./assets/images/dam-fornebu.jpg"
+              alt="Prøvetaking i vann som illustrasjon av faglig oppfølging"
+            />
+          </figure>
+        </section>
+
+        <section class="section">
+          <div class="news-grid">
+            <article class="news-card" data-reveal>
+              <span class="news-card__tag">Aktuelt tema</span>
+              <h2>Småbåthavner, spylevann og metallbelastning</h2>
+              <p>
+                Krav til håndtering av spylevann og avrenning skjerpes. Gode
+                løsninger krever både måledata, driftsforståelse og realistisk
+                tiltaksdesign.
+              </p>
+            </article>
+
+            <article class="news-card" data-reveal>
+              <span class="news-card__tag">Aktuelt tema</span>
+              <h2>eDNA som verktøy i målrettet miljøovervåking</h2>
+              <p>
+                eDNA gir nye muligheter for å dokumentere tilstedeværelse og
+                påvirkning i vannmiljøer der tradisjonelle metoder alene ikke er nok.
+              </p>
+            </article>
+
+            <article class="news-card" data-reveal>
+              <span class="news-card__tag">Aktuelt tema</span>
+              <h2>Naturbasert overvannshåndtering med faktisk driftssikkerhet</h2>
+              <p>
+                Blågrønne anlegg må dimensjoneres, detaljeres og følges opp slik at
+                de både fungerer hydraulisk og opprettholder naturverdier over tid.
+              </p>
+            </article>
+
+            <article class="news-card" data-reveal>
+              <span class="news-card__tag">Aktuelt tema</span>
+              <h2>EDD og tidlig miljørisiko i eiendom og industri</h2>
+              <p>
+                Tidlige miljøavklaringer reduserer usikkerhet i transaksjoner,
+                regulering og prosjektutvikling. Dette gjelder særlig sjønære og
+                historisk belastede arealer.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section section--cta-band">
+          <div class="cta-band" data-reveal>
+            <div>
+              <p class="eyebrow">Vil du ha oppdateringer?</p>
+              <h2>Ta kontakt hvis du ønsker faglig sparring eller prosjektmøte.</h2>
+              <p>
+                Vi bruker gjerne nyhetssiden også til korte fagnotater og prosjektinnsikt
+                når det er relevant for kunder og samarbeidspartnere.
+              </p>
+            </div>
+            <a class="button" href="./kontakt.html">Snakk med oss</a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="site-footer__inner">
+          <div class="site-footer__brand">
+            <img
+              src="./assets/images/logo-hisoy-miljo.png"
+              alt="Hisøy Miljø AS logo"
+            />
+            <p>Hisøy Miljø AS - din los</p>
+          </div>
+          <div class="site-footer__meta">
+            <a href="tel:+4792210245">+47 922 10 245</a>
+            <a href="mailto:sbo@hmiljo.no">sbo@hmiljo.no</a>
+            <span>Dovresvingen 9A, 1184 Oslo</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

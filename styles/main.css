@@ -313,10 +313,10 @@ main {
 
 .hero-note {
   position: absolute;
-  right: -18px;
-  bottom: 26px;
-  width: min(300px, 84%);
-  padding: 22px 22px 24px;
+  right: -54px;
+  bottom: 18px;
+  width: min(248px, 56%);
+  padding: 16px 18px 18px;
   border-radius: var(--radius-lg);
   background: rgba(11, 79, 86, 0.92);
   color: #edf8f7;
@@ -324,12 +324,17 @@ main {
 }
 
 .hero-note__title {
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   color: rgba(237, 248, 247, 0.72);
-  font-size: 0.84rem;
+  font-size: 0.76rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+.hero-note > p:last-child {
+  font-size: 0.92rem;
+  line-height: 1.45;
 }
 
 .stat-grid {

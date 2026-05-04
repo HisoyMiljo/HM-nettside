@@ -270,6 +270,13 @@ main {
   box-shadow: 0 20px 38px rgba(11, 79, 86, 0.22);
 }
 
+.button:disabled {
+  cursor: wait;
+  opacity: 0.8;
+  transform: none;
+  box-shadow: 0 14px 32px rgba(11, 79, 86, 0.18);
+}
+
 .button--ghost,
 .button--secondary {
   background: rgba(255, 255, 255, 0.72);
@@ -683,6 +690,28 @@ main {
 .contact-form textarea:focus {
   outline: 2px solid rgba(11, 141, 176, 0.2);
   border-color: rgba(11, 141, 176, 0.5);
+}
+
+.form-status {
+  padding: 14px 16px;
+  border-radius: 16px;
+  border: 1px solid rgba(10, 50, 56, 0.12);
+  background: rgba(11, 141, 176, 0.08);
+  color: var(--sea-deep);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.form-status.is-error {
+  border-color: rgba(160, 43, 43, 0.18);
+  background: rgba(160, 43, 43, 0.08);
+  color: #8d2a2a;
+}
+
+.form-status.is-success {
+  border-color: rgba(15, 103, 91, 0.18);
+  background: rgba(15, 103, 91, 0.08);
+  color: var(--forest);
 }
 
 .news-card {

@@ -102,12 +102,15 @@
             </div>
 
             <form
+              id="contact-form"
               class="contact-form"
               name="kontakt"
               method="POST"
+              netlify
               data-netlify="true"
               netlify-honeypot="website"
               action="/takk.html"
+              data-success-url="./takk.html"
               data-reveal
             >
               <input type="hidden" name="form-name" value="kontakt" />
@@ -150,11 +153,27 @@
                 ></textarea>
               </label>
 
+              <p class="form-status" data-form-status hidden aria-live="polite"></p>
+
               <button class="button" type="submit">Send melding</button>
             </form>
           </div>
         </section>
       </main>
+
+      <form
+        name="kontakt"
+        netlify
+        data-netlify="true"
+        netlify-honeypot="website"
+        hidden
+      >
+        <input type="text" name="name" />
+        <input type="text" name="company" />
+        <input type="email" name="email" />
+        <input type="tel" name="phone" />
+        <textarea name="message"></textarea>
+      </form>
 
       <footer class="site-footer">
         <div class="site-footer__inner">

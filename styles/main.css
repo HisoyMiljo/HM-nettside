@@ -1,6 +1,6 @@
 :root {
-  --bg: #eef5f2;
-  --bg-deep: #d8e8e4;
+  --bg: #e7f0ef;
+  --bg-deep: #cfdee2;
   --surface: rgba(255, 255, 255, 0.88);
   --surface-strong: #ffffff;
   --surface-tinted: rgba(11, 79, 86, 0.06);
@@ -35,9 +35,9 @@ body {
   min-width: 320px;
   color: var(--ink);
   background:
-    radial-gradient(circle at top left, rgba(11, 141, 176, 0.12), transparent 24%),
-    radial-gradient(circle at top right, rgba(15, 103, 91, 0.12), transparent 28%),
-    linear-gradient(180deg, #f6fbf8 0%, #e9f2ef 100%);
+    radial-gradient(circle at top left, rgba(11, 141, 176, 0.16), transparent 24%),
+    radial-gradient(circle at top right, rgba(15, 103, 91, 0.1), transparent 28%),
+    linear-gradient(180deg, #f0f7f7 0%, #dde9ea 100%);
   font-family: "Sora", "Segoe UI", sans-serif;
   line-height: 1.65;
 }
@@ -85,7 +85,7 @@ ul {
   top: 0;
   z-index: 30;
   backdrop-filter: blur(18px);
-  background: rgba(246, 251, 248, 0.84);
+  background: rgba(239, 247, 247, 0.88);
   border-bottom: 1px solid rgba(16, 46, 52, 0.08);
 }
 

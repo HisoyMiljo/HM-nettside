@@ -313,10 +313,10 @@ main {
 
 .hero-note {
   position: absolute;
-  right: -54px;
-  bottom: 18px;
-  width: min(248px, 56%);
-  padding: 16px 18px 18px;
+  right: -132px;
+  bottom: 12px;
+  width: min(214px, 40%);
+  padding: 14px 16px 16px;
   border-radius: var(--radius-lg);
   background: rgba(11, 79, 86, 0.92);
   color: #edf8f7;
@@ -333,8 +333,8 @@ main {
 }
 
 .hero-note > p:last-child {
-  font-size: 0.92rem;
-  line-height: 1.45;
+  font-size: 0.88rem;
+  line-height: 1.4;
 }
 
 .stat-grid {

@@ -445,6 +445,25 @@ main {
   margin-bottom: 14px;
 }
 
+.detail-card--media {
+  padding: 0;
+  overflow: hidden;
+}
+
+.detail-card--media img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.detail-card__content {
+  padding: 24px;
+}
+
+.detail-card--media .detail-card__content p {
+  margin-bottom: 0;
+}
+
 .detail-card ul,
 .comparison-card ul,
 .contact-box ul {

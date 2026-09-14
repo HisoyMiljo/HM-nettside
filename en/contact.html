@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Hisøy Miljø AS</title>
+    <meta
+      name="description"
+      content="Contact Hisøy Miljø AS for environmental site investigations, marine matters, treatment solutions, nature restoration and environmental consultancy."
+    />
+    <meta name="theme-color" content="#0b4f56" />
+    <link rel="alternate" hreflang="no" href="https://hmiljo.no/kontakt" />
+    <link rel="alternate" hreflang="en" href="https://hmiljo.no/en/contact" />
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Sora:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/main.css" />
+    <script defer src="../scripts/main.js"></script>
+  </head>
+  <body data-page="contact">
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="site-header__inner">
+          <a class="brand" href="./index.html" aria-label="Hisøy Miljø AS home">
+            <img src="../assets/images/logo-hisoy-miljo.png" alt="Hisøy Miljø AS logo" />
+          </a>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+            Menu
+          </button>
+          <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+            <a data-page-link="home" href="./index.html">Home</a>
+            <a data-page-link="services" href="./services.html">Services</a>
+            <a data-page-link="about" href="./about.html">About us</a>
+            <a data-page-link="projects" href="./projects.html">Reference projects</a>
+            <a data-page-link="contact" href="./contact.html">Contact</a>
+            <a data-page-link="news" href="./news.html">Insights</a>
+            <a
+              class="language-switch"
+              href="../kontakt.html"
+              hreflang="no"
+              lang="no"
+              aria-label="Vis denne siden på norsk"
+            >
+              <img class="language-switch__flag" src="../assets/icons/flag-no.svg" alt="" />
+              <span>Norsk</span>
+            </a>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <section class="page-hero section">
+          <div class="page-hero__content" data-reveal>
+            <p class="eyebrow">Contact</p>
+            <h1>Contact us early when environmental issues risk becoming obstacles. We will help you navigate.</h1>
+            <p class="lead">
+              We welcome an initial conversation about the issue, risks, regulatory
+              requirements and which investigations or measures should come first.
+            </p>
+          </div>
+          <figure class="page-hero__media" data-reveal>
+            <img src="../assets/images/tvende-fyr.webp" alt="Lighthouses symbolising direction and guidance" />
+          </figure>
+        </section>
+
+        <section class="section">
+          <div class="contact-layout">
+            <div class="contact-panel" data-reveal>
+              <h2>Direct contact</h2>
+              <div class="contact-list">
+                <a href="tel:+4792210245">+47 922 10 245</a>
+                <a href="mailto:sbo@hmiljo.no">sbo@hmiljo.no</a>
+                <span>Dovresvingen 9A, 1184 Oslo, Norway</span>
+                <span>Norwegian organisation no. 934 269 985</span>
+                <span>Every day, 09:00-19:00 CET</span>
+              </div>
+
+              <div class="contact-box">
+                <h3>When time is critical</h3>
+                <p>
+                  Call us when you need rapid clarification in matters involving
+                  contamination, sediments, odour, water management, environmental
+                  planning or other environmental challenges that may impede progress.
+                </p>
+              </div>
+
+              <div class="contact-box">
+                <h3>Typical enquiries</h3>
+                <ul>
+                  <li>suspected contamination in soil or sediments</li>
+                  <li>marinas, wash water or marine measures</li>
+                  <li>nature-based stormwater solutions or ponds</li>
+                  <li>Environmental Due Diligence and property assessment</li>
+                  <li>soil-conservation assessments for development projects</li>
+                  <li>assessment and permitting of emissions to air and water</li>
+                </ul>
+              </div>
+            </div>
+
+            <form
+              id="contact-form"
+              class="contact-form"
+              name="kontakt"
+              method="POST"
+              netlify
+              data-netlify="true"
+              netlify-honeypot="website"
+              action="/en/thanks.html"
+              data-success-url="./thanks.html"
+              data-sending-text="Sending..."
+              data-submit-text="Send enquiry"
+              data-error-message="The form could not be submitted just now. Please try again or contact us directly at sbo@hmiljo.no / +47 922 10 245."
+              data-reveal
+            >
+              <input type="hidden" name="form-name" value="kontakt" />
+              <p class="sr-only">
+                <label>
+                  Do not fill in this field:
+                  <input name="website" />
+                </label>
+              </p>
+
+              <h2>Send an enquiry</h2>
+
+              <label>
+                Name
+                <input type="text" name="name" required />
+              </label>
+
+              <label>
+                Company or organisation
+                <input type="text" name="company" />
+              </label>
+
+              <label>
+                Email
+                <input type="email" name="email" required />
+              </label>
+
+              <label>
+                Phone
+                <input type="tel" name="phone" />
+              </label>
+
+              <label>
+                What is your enquiry about?
+                <textarea
+                  name="message"
+                  rows="7"
+                  placeholder="Briefly describe the issue, location and the support you need."
+                  required
+                ></textarea>
+              </label>
+
+              <p class="form-status" data-form-status hidden aria-live="polite"></p>
+
+              <button class="button" type="submit">Send enquiry</button>
+            </form>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="site-footer__inner">
+          <div class="site-footer__brand">
+            <img src="../assets/images/logo-hisoy-miljo.png" alt="Hisøy Miljø AS logo" />
+            <p>Hisøy Miljø AS - your pilot</p>
+          </div>
+          <div class="site-footer__meta">
+            <a href="tel:+4792210245">+47 922 10 245</a>
+            <a href="mailto:sbo@hmiljo.no">sbo@hmiljo.no</a>
+            <span>Dovresvingen 9A, 1184 Oslo, Norway</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

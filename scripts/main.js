@@ -51,6 +51,11 @@ const contactForm = document.querySelector("#contact-form");
 if (contactForm) {
   const submitButton = contactForm.querySelector('button[type="submit"]');
   const statusMessage = contactForm.querySelector("[data-form-status]");
+  const sendingText = contactForm.dataset.sendingText || "Sender...";
+  const submitText = contactForm.dataset.submitText || "Send melding";
+  const errorMessage =
+    contactForm.dataset.errorMessage ||
+    "Skjemaet kunne ikke sendes akkurat nå. Prøv igjen, eller kontakt oss direkte på sbo@hmiljo.no / +47 922 10 245.";
 
   const setStatus = (message, type) => {
     if (!statusMessage) {
@@ -79,7 +84,7 @@ if (contactForm) {
 
     if (submitButton) {
       submitButton.disabled = true;
-      submitButton.textContent = "Sender...";
+      submitButton.textContent = sendingText;
     }
 
     try {
@@ -106,14 +111,11 @@ if (contactForm) {
         contactForm.dataset.successUrl || contactForm.getAttribute("action") || "./";
       window.location.href = successUrl;
     } catch (error) {
-      setStatus(
-        "Skjemaet kunne ikke sendes akkurat nå. Prøv igjen, eller kontakt oss direkte på sbo@hmiljo.no / +47 922 10 245.",
-        "error"
-      );
+      setStatus(errorMessage, "error");
     } finally {
       if (submitButton) {
         submitButton.disabled = false;
-        submitButton.textContent = "Send melding";
+        submitButton.textContent = submitText;
       }
     }
   });

@@ -716,6 +716,15 @@ html[lang="en"] .hero--home .hero__content h1 {
   justify-self: stretch;
 }
 
+body[data-page="projects"] .page-hero__content {
+  min-width: 0;
+}
+
+body[data-page="projects"] .page-hero__content h1 {
+  font-size: clamp(2.4rem, 4vw, 3.9rem);
+  overflow-wrap: break-word;
+}
+
 .comparison-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

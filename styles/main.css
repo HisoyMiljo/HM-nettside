@@ -252,16 +252,21 @@ main {
   .hero--home .hero-note {
     right: calc(-1 * var(--hero-note-offset) + 40px);
   }
+
+  html[lang="en"] .hero--home .hero-note {
+    top: 0;
+    bottom: auto;
+  }
 }
 
 .hero__content h1,
 .page-hero__content h1 {
-  font-size: clamp(2.8rem, 6vw, 5.4rem);
+  font-size: clamp(2.55rem, 5.6vw, 5rem);
   letter-spacing: 0;
 }
 
 html[lang="en"] .hero--home .hero__content h1 {
-  font-size: clamp(2.7rem, 4.8vw, 4.6rem);
+  font-size: clamp(2.55rem, 4.45vw, 4.3rem);
 }
 
 .lead {
@@ -590,6 +595,36 @@ html[lang="en"] .hero--home .hero__content h1 {
 
 .project-card__content p {
   color: var(--muted);
+}
+
+.project-card--copy {
+  display: flex;
+  min-height: 100%;
+  background:
+    linear-gradient(145deg, rgba(11, 79, 86, 0.98), rgba(11, 141, 176, 0.9)),
+    var(--sea-deep);
+}
+
+.project-card--copy .project-card__content {
+  align-self: center;
+}
+
+.project-card--copy .project-card__content h2,
+.project-card--copy .project-card__content p {
+  color: #ffffff;
+}
+
+.inline-document-link {
+  color: var(--sea-deep);
+  font-weight: 700;
+  font-style: italic;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.inline-document-link:hover {
+  color: var(--sea);
 }
 
 .quote-panel {
@@ -988,7 +1023,7 @@ html[lang="en"] .hero--home .hero__content h1 {
 
   .hero__content h1,
   .page-hero__content h1 {
-    font-size: clamp(2.3rem, 12vw, 3.4rem);
+    font-size: clamp(2.1rem, 11vw, 3.15rem);
   }
 
   .brand img {

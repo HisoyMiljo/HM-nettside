@@ -825,6 +825,208 @@ body[data-page="projects"] .page-hero__content h1 {
   color: var(--forest);
 }
 
+.file-portal-hero {
+  grid-template-columns: minmax(0, 760px);
+}
+
+.file-portal {
+  width: min(100%, 940px);
+  margin: 0 auto;
+  display: grid;
+  gap: 18px;
+}
+
+.file-portal__login,
+.file-portal__upload,
+.file-portal__result,
+.file-portal__files,
+.file-download {
+  padding: clamp(22px, 4vw, 36px);
+  border: 1px solid rgba(10, 50, 56, 0.1);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 18px 34px rgba(16, 46, 52, 0.07);
+}
+
+.file-portal__login,
+.file-portal__upload,
+.file-portal__result {
+  display: grid;
+  gap: 16px;
+}
+
+.file-portal__login {
+  width: min(100%, 560px);
+}
+
+.file-portal h2,
+.file-download h1,
+.file-download h2 {
+  font-family: "Fraunces", Georgia, serif;
+  line-height: 1.1;
+}
+
+.file-portal h2 {
+  font-size: clamp(1.7rem, 3vw, 2.2rem);
+}
+
+.file-portal h3 {
+  font-size: 1.1rem;
+}
+
+.file-portal__login p,
+.file-portal__upload p,
+.file-portal__result p,
+.file-portal__files p,
+.file-download > p,
+.file-download__details p {
+  color: var(--muted);
+}
+
+.file-portal label {
+  display: grid;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.file-portal input,
+.file-portal select {
+  width: 100%;
+  border: 1px solid rgba(10, 50, 56, 0.14);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.96);
+  padding: 14px 16px;
+  font: inherit;
+  color: var(--ink);
+}
+
+.file-portal input:focus,
+.file-portal select:focus {
+  outline: 2px solid rgba(11, 141, 176, 0.2);
+  border-color: rgba(11, 141, 176, 0.5);
+}
+
+.file-portal__hint,
+.file-portal__progress {
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.file-portal__workspace {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.file-portal__workspace[hidden],
+.file-portal__result[hidden] {
+  display: none;
+}
+
+.file-portal__files {
+  grid-column: 1 / -1;
+  display: grid;
+  gap: 18px;
+}
+
+.file-portal progress {
+  width: 100%;
+  height: 12px;
+  overflow: hidden;
+  border: 0;
+  border-radius: 999px;
+}
+
+.file-portal progress::-webkit-progress-bar {
+  background: rgba(11, 79, 86, 0.1);
+}
+
+.file-portal progress::-webkit-progress-value {
+  background: linear-gradient(90deg, var(--sea-deep), var(--sea));
+}
+
+.file-portal progress::-moz-progress-bar {
+  background: linear-gradient(90deg, var(--sea-deep), var(--sea));
+}
+
+.button--compact {
+  min-height: 42px;
+  padding: 0 16px;
+}
+
+[data-file-list] {
+  display: grid;
+  gap: 12px;
+}
+
+.file-portal__file {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(10, 50, 56, 0.1);
+}
+
+.file-portal__file h3 {
+  margin-bottom: 5px;
+}
+
+.file-portal__file p {
+  font-size: 0.9rem;
+}
+
+.file-portal__file-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.file-portal__delete {
+  padding: 8px 0;
+  border: 0;
+  background: transparent;
+  color: #8d2a2a;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.file-portal__delete:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.file-download-section {
+  display: grid;
+  place-items: center;
+  min-height: 58vh;
+}
+
+.file-download {
+  width: min(100%, 680px);
+  display: grid;
+  gap: 16px;
+}
+
+.file-download h1 {
+  font-size: clamp(2.1rem, 5vw, 3.7rem);
+}
+
+.file-download__details {
+  display: grid;
+  gap: 6px;
+  padding: 18px 0;
+  border-top: 1px solid rgba(10, 50, 56, 0.1);
+  border-bottom: 1px solid rgba(10, 50, 56, 0.1);
+}
+
 .news-card {
   display: grid;
   gap: 12px;
@@ -994,6 +1196,10 @@ body[data-page="projects"] .page-hero__content h1 {
     grid-template-columns: 1fr;
   }
 
+  .file-portal__workspace {
+    grid-template-columns: 1fr;
+  }
+
   .hero-note {
     position: static;
     width: 100%;
@@ -1064,5 +1270,18 @@ body[data-page="projects"] .page-hero__content h1 {
   .page-hero__media,
   .split-panel__media {
     border-radius: 24px;
+  }
+
+  .file-portal__file {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .file-portal__file-actions {
+    width: 100%;
+  }
+
+  .file-portal__file-actions .button {
+    flex: 1 1 180px;
   }
 }

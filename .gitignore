@@ -1,5 +1,6 @@
 Thumbs.db
 .DS_Store
 .netlify
+node_modules/
 proisp-upload/
 proisp-upload-deploy.zip

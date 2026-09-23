@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Del filer | Hisøy Miljø AS</title>
+    <meta
+      name="description"
+      content="Last opp og del større filer med kunder gjennom Hisøy Miljø AS sin sikre filportal."
+    />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#0b4f56" />
+    <link rel="alternate" hreflang="no" href="https://hmiljo.no/filutveksling" />
+    <link rel="alternate" hreflang="en" href="https://hmiljo.no/en/file-sharing" />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Sora:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <script defer src="./scripts/main.js"></script>
+    <script defer src="./scripts/file-portal.js"></script>
+  </head>
+  <body data-page="files">
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="site-header__inner">
+          <a class="brand" href="./index.html" aria-label="Hisøy Miljø AS hjem">
+            <img src="./assets/images/logo-hisoy-miljo.png" alt="Hisøy Miljø AS logo" />
+          </a>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+            Meny
+          </button>
+          <nav id="site-nav" class="site-nav" aria-label="Hovedmeny">
+            <a data-page-link="home" href="./index.html">Forside</a>
+            <a data-page-link="services" href="./tjenester.html">Tjenester</a>
+            <a data-page-link="about" href="./om-oss.html">Om oss</a>
+            <a data-page-link="projects" href="./referanseprosjekter.html">Referanseprosjekter</a>
+            <a data-page-link="contact" href="./kontakt.html">Kontakt</a>
+            <a data-page-link="news" href="./nyheter.html">Nyheter</a>
+            <a
+              class="language-switch"
+              href="./en/file-sharing.html"
+              hreflang="en"
+              lang="en"
+              aria-label="View this page in English"
+            >
+              <img class="language-switch__flag" src="./assets/icons/flag-uk.svg" alt="" />
+              <span>English</span>
+            </a>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <section class="page-hero section file-portal-hero">
+          <div class="page-hero__content" data-reveal>
+            <p class="eyebrow">Filutveksling</p>
+            <h1>Del større filer med kunder.</h1>
+            <p class="lead">
+              Last opp filer på opptil 100 MB og få en egen nedlastingslenke til
+              kunden. Lenken virker bare for den aktuelle filen og utløper etter
+              perioden du velger.
+            </p>
+          </div>
+        </section>
+
+        <section class="section section--compact">
+          <div class="file-portal" data-file-portal="admin" data-download-path="/filnedlasting.html" data-reveal>
+            <form class="file-portal__login" data-file-login>
+              <p class="eyebrow">For Hisøy Miljø</p>
+              <h2>Åpne filportalen</h2>
+              <p>Bruk administrasjonspassordet for å laste opp, kopiere lenker og slette filer.</p>
+              <label>
+                Administrasjonspassord
+                <input name="password" type="password" autocomplete="current-password" required />
+              </label>
+              <button class="button" type="submit">Åpne filportalen</button>
+            </form>
+
+            <p class="form-status" data-file-status hidden aria-live="polite"></p>
+
+            <div class="file-portal__workspace" data-file-upload hidden>
+              <form class="file-portal__upload" data-file-upload-form>
+                <div>
+                  <p class="eyebrow">Ny fil</p>
+                  <h2>Last opp og lag lenke</h2>
+                </div>
+                <label>
+                  Velg fil
+                  <input data-file-input name="file" type="file" required />
+                  <span class="file-portal__hint">Maksimal filstørrelse: 100 MB</span>
+                </label>
+                <label>
+                  Tilgjengelig i
+                  <select name="expiryDays">
+                    <option value="7">7 dager</option>
+                    <option value="30" selected>30 dager</option>
+                    <option value="60">60 dager</option>
+                    <option value="90">90 dager</option>
+                  </select>
+                </label>
+                <progress data-upload-progress max="100" value="0" hidden></progress>
+                <p class="file-portal__progress" data-upload-progress-text></p>
+                <button class="button" data-upload-button type="submit">Last opp fil</button>
+              </form>
+
+              <div class="file-portal__result" data-file-result hidden>
+                <h3>Del denne lenken</h3>
+                <p>Alle som får lenken kan laste ned akkurat denne filen frem til utløpsdatoen.</p>
+                <label>
+                  Nedlastingslenke
+                  <input data-file-result-link type="text" readonly />
+                </label>
+                <button class="button button--secondary button--compact" data-copy-new-link type="button">
+                  Kopier lenke
+                </button>
+              </div>
+
+              <div class="file-portal__files">
+                <div>
+                  <p class="eyebrow">Aktive filer</p>
+                  <h2>Delte filer</h2>
+                </div>
+                <div data-file-list aria-live="polite"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="site-footer__inner">
+          <div class="site-footer__brand">
+            <img src="./assets/images/logo-hisoy-miljo.png" alt="Hisøy Miljø AS logo" />
+            <p>Hisøy Miljø AS - din los</p>
+          </div>
+          <div class="site-footer__meta">
+            <a href="tel:+4792210245">+47 922 10 245</a>
+            <a href="mailto:sbo@hmiljo.no">sbo@hmiljo.no</a>
+            <span>Dovresvingen 9A, 1184 Oslo</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -81,8 +81,31 @@ function chunkKey(id, index) {
   return `chunks/${id}/${index}`;
 }
 
+function activeFilesKey() {
+  return "indexes/active-files";
+}
+
 async function getJson(store, key) {
   return store.get(key, { type: "json", consistency: "strong" });
+}
+
+async function readActiveFileIds(store) {
+  const ids = await getJson(store, activeFilesKey());
+  return Array.isArray(ids) ? ids.filter((id) => /^[a-f0-9-]{36}$/i.test(id)) : [];
+}
+
+async function writeActiveFileIds(store, ids) {
+  await store.setJSON(activeFilesKey(), [...new Set(ids)]);
+}
+
+async function addActiveFile(store, id) {
+  const ids = await readActiveFileIds(store);
+  await writeActiveFileIds(store, [id, ...ids.filter((item) => item !== id)]);
+}
+
+async function removeActiveFile(store, id) {
+  const ids = await readActiveFileIds(store);
+  await writeActiveFileIds(store, ids.filter((item) => item !== id));
 }
 
 async function getSession(store, id) {
@@ -99,6 +122,7 @@ async function deleteFile(store, manifest) {
     keys.push(chunkKey(manifest.id, index));
   }
   await Promise.all(keys.map((key) => store.delete(key)));
+  await removeActiveFile(store, manifest.id);
 }
 
 async function getSharedFile(store, id, downloadToken) {
@@ -202,6 +226,7 @@ async function finalizeUpload(req, store) {
   };
 
   await store.setJSON(fileKey(id), manifest, { onlyIfNew: true });
+  await addActiveFile(store, id);
   await store.delete(sessionKey(id));
 
   return response({
@@ -213,22 +238,22 @@ async function finalizeUpload(req, store) {
 async function listFiles(req, store) {
   requireAdmin(req);
   const { blobs } = await store.list({ prefix: "files/" });
-  const manifests = await Promise.all(
-    blobs
-      .filter(({ key }) => key.endsWith("/manifest"))
-      .map(async ({ key }) => getJson(store, key))
-  );
-
+  const scannedIds = blobs
+    .filter(({ key }) => /^files\/[a-f0-9-]{36}\/manifest$/i.test(key))
+    .map(({ key }) => key.split("/")[1]);
+  const ids = [...new Set([...await readActiveFileIds(store), ...scannedIds])];
+  const manifests = await Promise.all(ids.map((id) => getJson(store, fileKey(id))));
   const activeManifests = [];
-  await Promise.all(
-    manifests.filter(Boolean).map(async (manifest) => {
-      if (manifest.expiresAt < Date.now()) {
-        await deleteFile(store, manifest);
-        return;
-      }
-      activeManifests.push(manifest);
-    })
-  );
+
+  for (const manifest of manifests.filter(Boolean)) {
+    if (manifest.expiresAt < Date.now()) {
+      await deleteFile(store, manifest);
+      continue;
+    }
+    activeManifests.push(manifest);
+  }
+
+  await writeActiveFileIds(store, activeManifests.map((manifest) => manifest.id));
 
   const files = activeManifests
     .map((manifest) => ({

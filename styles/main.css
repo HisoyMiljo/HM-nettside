@@ -957,6 +957,18 @@ body[data-page="projects"] .page-hero__content h1 {
   padding: 0 16px;
 }
 
+.button.is-copied {
+  background: linear-gradient(135deg, var(--forest), #23866f);
+  color: #ffffff;
+  animation: file-link-copied 0.35s ease-out;
+}
+
+@keyframes file-link-copied {
+  50% {
+    transform: scale(1.03);
+  }
+}
+
 [data-file-list] {
   display: grid;
   gap: 12px;

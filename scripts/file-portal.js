@@ -91,6 +91,18 @@ if (filePortal) {
     if (type) element.classList.add(type === "error" ? "is-error" : "is-success");
   };
 
+  const flashCopied = (button) => {
+    const originalText = button.textContent;
+    button.disabled = true;
+    button.textContent = messages.copied;
+    button.classList.add("is-copied");
+    window.setTimeout(() => {
+      button.disabled = false;
+      button.textContent = originalText;
+      button.classList.remove("is-copied");
+    }, 1800);
+  };
+
   if (filePortal.dataset.filePortal === "admin") {
     const loginForm = filePortal.querySelector("[data-file-login]");
     const uploadPanel = filePortal.querySelector("[data-file-upload]");
@@ -119,14 +131,15 @@ if (filePortal) {
       actions.className = "file-portal__file-actions";
       const copyButton = document.createElement("button");
       copyButton.type = "button";
-      copyButton.className = "button button--secondary button--compact";
+      copyButton.className = "button button--compact";
       copyButton.textContent = messages.copy;
       copyButton.addEventListener("click", async () => {
-        await navigator.clipboard.writeText(file.shareUrl);
-        copyButton.textContent = messages.copied;
-        setTimeout(() => {
-          copyButton.textContent = messages.copy;
-        }, 1800);
+        try {
+          await navigator.clipboard.writeText(file.shareUrl);
+          flashCopied(copyButton);
+        } catch (error) {
+          setStatus(status, error.message, "error");
+        }
       });
       const deleteButton = document.createElement("button");
       deleteButton.type = "button";
@@ -238,11 +251,17 @@ if (filePortal) {
         progress.hidden = true;
         setStatus(status, messages.complete, "success");
         await loadFiles();
-        result.querySelector("[data-copy-new-link]").onclick = async () => {
-          await navigator.clipboard.writeText(shareUrl);
-          setStatus(status, messages.copied, "success");
+        if (!fileList.querySelector(".file-portal__file")) {
+          fileList.replaceChildren(showFile({ ...sharedFile, shareUrl }));
+        }
+        result.querySelector("[data-copy-new-link]").onclick = async (event) => {
+          try {
+            await navigator.clipboard.writeText(shareUrl);
+            flashCopied(event.currentTarget);
+          } catch (error) {
+            setStatus(status, error.message, "error");
+          }
         };
-        void sharedFile;
       } catch (error) {
         progress.hidden = true;
         setStatus(status, error.message || messages.failed, "error");
